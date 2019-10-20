@@ -9,8 +9,8 @@ html,body{
 }
 
 div .logo img {
-  height: 200px;
-  width: 300px;
+  height: 150px;
+  width: 225px;
   border-radius: 50%;
   }
 
@@ -18,15 +18,18 @@ div .logo img {
   width: 100%;
   max-width: 1280;
   margin: 0 auto;
-}
+  background-size: cover;
+  /* position: relative;
+  left: -30px; */
+  }
 
 .clear { 
   clear: both;
 }
 header {
-  padding: 20px 2% 35px 2%;
+  padding: 30px 2% 30px 2%; 
   height: 130px;
-}
+  }
 
 header div.logo {
   float: left;
@@ -36,17 +39,16 @@ header div.logo {
 header nav.desktop {
   float: right;
   position: relative;
-  top: 40px;
+  top: 10px;
 }
 
 header nav.desktop ul {
   list-style-type: none;
- 
-}
+  }
 
 header nav.desktop ul li {
   float: left;
-  font-size: 23px;
+  font-size: 30px;
   padding: 0 30px;
   margin-top: 30px;
 }
@@ -59,14 +61,40 @@ header nav.desktop a {
 
 section.banner {
   width: 100%;
-  height: calc(100vh - 130px);
+  height: 100vw;
   min-height: 600px;
+  max-height: 800px;
   background-color: black;
-  background-image: url('../imagens/bg.jpg');
+  background-image: url('../imagens/bgcafe.jpg');
+  background-position: left top;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
+@media screen and (max-width: 1400px){
+  section.banner {
+    background-size: 90% auto;
+    background-position: 200% 100%;
+      }
+ }
+
+ @media screen and (max-width: 1024px){
+   section.banner{
+    background-size: cover;
+    background-position: center;
+    height: 70vw;
+    min-height: 500px;
+   }
+ }
+
+ @media screen and (max-width: 768px){
+  section.banner{
+   background-size: cover;
+   background-position: center;
+   height: 50vw;
+   min-height: 0px;
+    }
+}
 
 
 
